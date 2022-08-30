@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            text-align: left;
+        }
+        button{
+            display: inline;
+            position: relative;
+            
+        }
+        .star{
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function generateCaptcha()
+        
+        {
+        var cap = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+        var i;
+        for (i=0;i<4;i++){
+            var a = cap[Math.floor(Math.random() * cap.length)];
+            var b = cap[Math.floor(Math.random() * cap.length)];
+            var c = cap[Math.floor(Math.random() * cap.length)];
+            var d = cap[Math.floor(Math.random() * cap.length)];
+        }    
+        var code = a + b + c + d;
+        document.getElementById("mainCaptcha").value = code
+        }
+        function CheckValidCaptcha(){
+                var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+            var string2 = removeSpaces(document.getElementById('txtinput').value);
+            
+            if (string1 == string2){
+                document.getElementById('success').innerHTML = "Form is validated Successfully";
+                alert("Form is validated Successfully");
+                window.location = "https://www.youtube.com/c/buzz2daytech/";
+                return true;
+            }
+            else{
+                document.getElementById('error').innerHTML = "Please Enter a Valid Captcha";
+                return false;
+            }
+        }
+        function removeSpaces(string){
+            return string.split(' ').join('');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Passport Application Form</h1>
+        <h3>Governament of India, Ministry of External Affairs</h3>
+        <p>
+            Please read the Passport Instruction Booklet carefully before filling the form. Furnishing of incorrect information/<br> 
+            suppression of information would lead to rejection of application and would attract penal provisions as prescribed<br> 
+            under the Passports Act, 1967. Please produce your original documents at the time of submission of the form. All fields 
+            marked with (*) are mandatory to fill.
+        </p>
+    </header>
+    <p>
+        <b>Important information: </b>Passport application can be precessed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.
+    </p> 
+    <hr>
+    <div class="main_body">
+        <table>
+            <tr>
+                <td rowspan="2">
+                    <span>Register to apply at<span class = "star">*</span></span>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <input type="radio" id = 'CPV' name = "reg_location" value = "CPVDelhi">
+                    <label for="CPV">CPV Delhi</label><br>
+                    <input type="radio" id = 'CPV' name = "reg_location" value = "PassportOffice">
+                    <label for="PassportOffice">Passport Office</label><br>
+                </td>
+                <td rowspan="2">
+                    <small>Select the 'CPV Delhi' option to apply for Diplomatic/Official passport at Consular, Passport and Visa (CPV) division, Delhi.</small>
+                </td>
+            </tr><tr></tr>
+            <tr>
+                <td>
+                    <label for="po">Passport Office<span class = "star">*</span><small>(As per Present Residential Address)</small></label>
+                </td>
+                <td colspan="2" width="20%">
+                    <select name="po" id="po" class="dropdown-box" title ="Helps select passport office according to current residential address of the individual">
+                        <option value="" style="text-align: center;">----- Select -----</option>
+                                    <option value="1">Ahmedabad</option>
+                                    <option value="2">Amritsar</option>
+                                    <option value="4">Bareilly</option>
+                                    <option value="5">Bengaluru</option>
+                                    <option value="7">Bhopal</option>
+                                    <option value="3">Bhubaneswar</option>
+                                    <option value="10">Chandigarh</option>
+                                    <option value="26">Chennai</option>
+                                    <option value="11">Cochin</option>
+                                    <option value="9">Coimbatore</option>
+                                    <option value="14">Dehradun</option>
+                                    <option value="15">Delhi</option>
+                                    <option value="18">Ghaziabad</option>
+                                    <option value="16">Goa</option>
+                                    <option value="17">Guwahati</option>
+                                    <option value="19">Hyderabad</option>
+                                    <option value="23">Jaipur</option>
+                                    <option value="21">Jalandhar</option>
+                                    <option value="22">Jammu</option>
+                                    <option value="8">Kolkata</option>
+                                    <option value="24">Kozhikode</option>
+                                    <option value="25">Lucknow</option>
+                                    <option value="27">Madurai</option>
+                                    <option value="6">Mumbai</option>
+                                    <option value="29">Nagpur</option>
+                                    <option value="30">Patna</option>
+                                    <option value="31">Pune</option>
+                                    <option value="33">Raipur</option>
+                                    <option value="32">Ranchi</option>
+                                    <option value="35">Shimla</option>
+                                    <option value="34">Srinagar</option>
+                                    <option value="36">Surat</option>
+                                    <option value="38">Tiruchirappalli</option>
+                                    <option value="39">Trivandrum</option>
+                                    <option value="321">Vijayawada</option>
+                                    <option value="40">Visakhapatnam</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    <small>Tibetan Refugees applying for Identity Certificate must register with 'Delhi' Passport Office.</small>
+                </td>            
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <label for="fname">Given Name<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+                </td>
+                <td>
+                    <br>
+                    <input type = "text" id = "fname" name = "fname"><br><br>
+                </td>
+                <td colspan ="5" width="50%" class="last_col">
+                <strong> First Name + Middle Name</strong> Initials and honorifics (e.g. Dr.,Col.,etc.) are not allowed.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">Surname<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+                </td>
+                <td>
+                    <input type = "text" id = "lname" name = "lname"><br>
+                </td>
+                <td>
+                    -
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <p>Date of Birth (DD/MMM/YYYY)<span class = "star">*</span></p>
+                </td>
+                <td>
+                    <input  type="Date">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="email">E-mail Id<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+                </td>
+                <td>
+                    <input type = "text" id = "email" name = "email"><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="option">Do you want your Login Id to be the same as E-mail Id?</label>
+                </td>
+                <td>
+                    <input type="radio" id = 'yes_no' name = "yes" value = "yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id = 'yes_no' name = "No" value = "No">
+                    <label for="no">No</label><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="lid">Login Id<span class = "star">*</span></label>
+                </td>
+                <td>
+                    <input type = "text" id = "lid" name = "lid"><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="pwd">Password<span class = "star">*</span></label>
+                </td>
+                <td>
+                    <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="cpwd">Confirm Password<span class = "star">*</span></label>
+                </td>
+                <td>
+                    <input type="password" id="cpwd" name="cpwd" minlength="8"><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="hq">Hint Question</label>
+                </td>
+                <td>
+                    <select name="hq" id="hq" class="dropdown-box" title ="Hint Question will help in password recovery, if you forget your password">
+                        <option value="">----- Select -----</option>
+                        <option value="Colour">Favourite Colour</option>
+                        <option value="Birth City">Birth City</option>
+                        <option value="Favourite Cricketer">Favourite Cricketer</option>
+                        <option value="Favourite Food">Favourite Food</option>
+                        <option value="First School">First School</option>
+                        <option value="Make of First car Owned">Make of First car Owned</option>
+                        <option value="Mother's Maiden Name">Mother's Maiden Name</option>
+                    </select>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label for="hq">Hint Answer</label>
+                </td>
+                <td>
+                    <input type="password" id="" name="cpwd"><br><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <!-------------------------------------------------------------------------------------------------------------->
+                    <div onload="generateCaptcha();">
+                        <tr>
+                            <td>Enter Characters Displayed <sup style="color:red">*</sup></td>
+                            <td>
+                                <input type="text" id="mainCaptcha" readonly="readonly"/>
+                            </td>
+                            <td>
+                                <input type="button" id="refresh" value="Refresh" onclick="generateCaptcha();"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td><input type="text" id="ans" name="ans"></td>
+                        </tr>
+            
+                        <tr>
+                            <td> </td>
+                            <td>
+                                <button type="button" style="background-color:blue;color:white;" onclick="alert('Sure?');CheckValidCaptcha();">Register</button>
+                        <button type="button" style="background-color:blue;color:white;" onclick="alert('Sure?')">Clear</button>
+                            </td>
+                        </tr>
+            
+                        <tr>
+                            <td>
+                            <span id="error" style="color:red"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <span id="success" style="color:green"></span>
+                            
+                        </td>
+                        </tr>  
+            
+                    </div>
+<!-------------------------------------------------------------------------------------------------------------->            
+                    <img width="185" src="/AppOnlineProject/PspTest01Captcha09S.awsti?x=1660123085805" id="captcha" alt="Captcha" title="Enter Captcha">
+                    <br><br>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button type ="button">Register</button>
+    <button type ="button">Clear</button>
+</body>
+</html>

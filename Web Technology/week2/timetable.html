@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable</title>
+    <style>
+        table {
+            border: 1px solid #000000;
+        }
+
+        td {
+            border: 0.0001px solid #000000;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ADD8E6;
+            border: 0.01px solid #000000;
+            text: align="center" height="50" width="100"
+        }
+
+        .Day {
+            background-color: #FFD580;
+        }
+
+        .Lunch,
+        .Break {
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Time Table Section-A</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th>08:00-09:00</th>
+            <th>09:00-10:00</th>
+            <th>10:00-10:30</th>
+            <th>10:30-11:30</th>
+            <th>11:30-12:30</th>
+            <th>12:30-01:00</th>
+            <th>01:00-02:00</th>
+            <th>02:00-03:00</th>
+            <th>03:00-03:30</th>
+            <th>03:30-04:30</th>
+            <th colspan="2">04:30-05:30</th>
+        </tr>
+        <tr>
+            <td class="Day">MON</td>
+            <td></td>
+            <td>MFDS</td>
+            <td class="Break">Break</td>
+            <td>DL</td>
+            <td>NLP</td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td colspan="4">DL Lab Batch 2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="Day">TUE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td>-</td>
+            <td>CC</td>
+            <td class="Break">Break</td>
+            <td>OS</td>
+            <td colspan="2"></td>
+
+        </tr>
+        <tr>
+            <td class="Day">WED</td>
+            <td></td>
+            <td>NLP</td>
+            <td class="Break">Break</td>
+            <td>CC</td>
+            <td>-</td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td colspan="4">WT Lab Batch 2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="Day">THU</td>
+            <td></td>
+            <td colspan="3">OS Lab Batch 2</td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td>DL</td>
+            <td>MFDS</td>
+            <td class="Break">Break</td>
+            <td>OS</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="Day">FRI</td>
+            <td>-</td>
+            <td>CC</td>
+            <td class="Break">Break</td>
+            <td>DL</td>
+            <td>MFDS</td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="Day">SAT</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2" class="Lunch">Lunch Break</td>
+            <td>OS</td>
+            <td>NLP</td>
+            <td class="Break">Break</td>
+            <td>DL</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

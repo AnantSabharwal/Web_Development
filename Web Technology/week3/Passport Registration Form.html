@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Registration Form</title>
+    <link rel="stylesheet" href="p_style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Passport Application Form</h1>
+        <h3>Governament of India, Ministry of External Affairs</h3>
+        <p>
+            Please read the Passport Instruction Booklet carefully before filling the form. Furnishing of incorrect information/<br> 
+            suppression of information would lead to rejection of application and would attract penal provisions as prescribed<br> 
+            under the Passports Act, 1967. Please produce your original documents at the time of submission of the form. All fields 
+            marked with (*) are mandatory to fill.
+        </p>
+    </header> 
+    <!--<img src = "https://2.bp.blogspot.com/-bFK78T72o9w/WSKduKlw-bI/AAAAAAAAJr0/mEvsCwrShlIj7xcgu8cf9gE5PB_3-MvMwCLcB/s1600/National_Emblem_India.jpg" alt = "Indian National Emblem">--> 
+    <hr>
+    <form>
+        <span>Register to apply at<span class = "star">*</span></span>
+        <input type="radio" id = 'CPV' name = "reg_location" value = "CPVDelhi">
+        <label for="CPV">CPV Delhi</label><br>
+        <input type="radio" id = 'CPV' name = "reg_location" value = "PassportOffice">
+        <label for="PassportOffice">Passport Office</label><br>
+    </form><br>
+    
+    <form>
+        <label for="fname">Given Name<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+        <input type = "text" id = "fname" name = "fname"><br><br>
+        <label for="lname">Surname<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+        <input type = "text" id = "lname" name = "lname"><br>
+        <p>Date of Birth (DD/MMM/YYYY)<span class = "star">*</span>  <input  type="Date"></p>
+        <label for="email">E-mail Id<small>(Max 45 CHaracters)</small><span class = "star">*</span></label>
+        <input type = "text" id = "email" name = "email"><br><br>
+        <label for="option">Do you want your Login Id to be the same as E-mail Id?</label>
+        <input type="radio" id = 'yes_no' name = "yes" value = "yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id = 'yes_no' name = "No" value = "No">
+        <label for="no">No</label><br><br>
+        <label for="lid">Login Id<span class = "star">*</span></label>
+        <input type = "text" id = "lid" name = "lid"><br><br>
+        <label for="pwd">Password<span class = "star">*</span></label>
+        <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+        <label for="cpwd">Confirm Password<span class = "star">*</span></label>
+        <input type="password" id="cpwd" name="cpwd" minlength="8"><br><br>
+        <label for="hq">Hint Question</label>
+        <select name="hq" id="hq" class="dropdown-box" title ="Hint Question will help in password recovery, if you forget your password">
+            <option value="">----- Select -----</option>
+            <option value="Colour">Favourite Colour</option>
+            <option value="Birth City">Birth City</option>
+            <option value="Favourite Cricketer">Favourite Cricketer</option>
+            <option value="Favourite Food">Favourite Food</option>
+            <option value="First School">First School</option>
+            <option value="Make of First car Owned">Make of First car Owned</option>
+            <option value="Mother's Maiden Name">Mother's Maiden Name</option>
+        </select>
+        <br><br>
+        <label for="hq">Hint Answer</label>
+        <input type="password" id="" name="cpwd">
+        <br><br>
+        <label for = "test123">Enter Characters Displayed<span class="star">*</span></label>
+        <img width="185" src="/AppOnlineProject/PspTest01Captcha09S.awsti?x=1660123085805" id="captcha" alt="Captcha" title="Enter Captcha">
+        <br><br>
+    </form><br>
+    <button type ="button">Register</button>
+    <button type ="button">Clear</button>
+</body>
+</html>
