@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar eclipse Animation</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin-top: 250px;
+            animation: sky 5s infinite;
+        }
+
+        .sun {
+            width: 375px;
+            height: 375px;
+            background: #f7f5ee;
+            margin: auto;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px #f7f5ee;
+        }
+
+        .moon {
+            width: 374px;
+            height: 374px;
+            background: #000000;
+            margin: auto;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px #000000;
+            animation-name: eclipse;
+            animation-duration: 28s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        @keyframes eclipse {
+            from {
+                position: absolute;
+                top: 250px;
+                left: 0;
+            }
+
+            to {
+                position: absolute;
+                top: 250px;
+                left: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="moon"></div>
+</body>
+
+</html>
